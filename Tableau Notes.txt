@@ -1,0 +1,701 @@
+EDA Exploratory Data Analysis
+No. of sheets = 1
+No. of columns = 16
+No. of rows = 700
+Numeric = 8
+Character = 4
+Dates = 4
+(Year, Quater, Month, Week, Day)
+Drill Down
+Roll up
+
+1) Calculate total units sold in Mexico.
+SUMIF
+
+2) Calculate total sales in Canada.
+3) Calculate total profit in Germany.
+4) Calculate total COGS for Government segment.
+
+Similar to SUMIF, there is COUNTIF function to count no. of records based on certain condition.
+
+
+1) Count no. of records having discount band = High
+
+For multiple conditions, use COUNTIFS function.
+
+1) Count no. of records for High discount band and product Paseo.
+2) Count no. of records for Low discount band and product Montana and Country Germany.
+
+To calculate average based on some condition, use AVERAGEIF function.
+
+1) Calculate average sale price for country France.
+2) Calculate average manufacturing price for 
+product VTT.
+3) Calculate average discount for segment Enterprise.
+
+
+
+
+Count no. of records having discount 0%
+
+Count no. of records having 10% discount in Germany and product Velo.
+1) calculate standard deviation & variance of Sales.
+2) calculate standard deviation & variance of Sale price.
+3) calculate standard deviation & variance of manufacturing price.
+
+
+
+
+Q1 - First quartile - 25% values are below this value and 75% values are above
+Q2 - Second quartile (Median) - 50% values are below this value and 50% values are above
+Q3 - Third quartile - 75% values are below this value and 25% values are above
+
+Distance between Q1 & Q3 is called IQR (Inter Quartile Range) = Q3 - Q1
+
+Upper Whisker (UW) = Q3 + (1.5 * IQR)
+Lower Whisker (LW) = Q1 - (1.5 * IQR)
+
+Any value below LW or above UW is classified as Outlier.
+
+
+Measure - Any numeric column (with or without decimal) on which maths or stats functions can be applied to get meaningful result e.g. sales, profit, tax, cost etc
+
+Dimension - Any number / date / character value which is not a measure and can be used to aggregate the measure e.g City, Country, Department, Gender, Birth date, Rating etc.
+
+
+1) Profit % by Country
+2) Profit % by Product
+3) Total COGS by Segment
+4) Avg sale price by Product
+5) No. of records % by Discount Band
+
+Correlation - It is effect of change in one numeric variable (X) on the second variable (Y). Its value ranges from -1 to +1. -1 means perfect negative correlation and +1 means perfect positive correlation. 0 indicates no correlation.
+
+Data Consolidation
+
+Conditional formatting
+1. Set header of column A = Sales
+2. Add 20 random values between 3000 to 8000
+3. Calculate average of these values.
+4. Use conditional formatting to set 2 colors- below average & above average
+-----------------------------------
+5. Set header of column B = Profit
+6. Add 20 random values between -2000 to 2000
+7. Use conditional formatting to set 2 colors - positive & negative
+
+1) Using Sales & Profit values, find no. of records where Sales is above average but Profit is negative
+
+2) Using Sales & Profit values, find no. of records where Sales is below average and Profit is positive
+
+Set unit cost or unit price or quantity in such a combination that net profit will be 1500.
+
+If Profit column L has positive value then print "Profit" 
+If it has negative value then print "Loss"
+
+1) Find no. of losses in Mexico.
+2) Find no. of losses in Germany.
+3) Find no. of losses in France.
+
+If Month number (column N) is between 1 to 3, print "Q1"
+If Month number (column N) is between 4 to 6, print "Q2"
+If Month number (column N) is between 7 to 9, print "Q3"
+If Month number (column N) is between 10 to 12, print "Q4"
+
+Using columns Country & Quarter, find values for following conditions - 
+1) Find average profit for Canada & Q3
+2) Find total sales for France & Q1
+3) Find average units sold for Mexico & Q2
+4) Find no. of records in Germany for Q4.
+
+
+SUMPRODUCT
+
+
+Fill quantity 20 random values between 10 to 99. Fill unit price with 20 random values between 5 to 20. Fill Discount % values with 20 random values between 25 to 55 and divide it by 100.
+
+Calculate total sales amount.
+
+
+
+Since profit depends on COGS, Profit will be displayed on Y axis while COGS will be displayed on X axis
+
+Profit = b0 + (b1 * COGS)
+where b0 = intercept and b1 is slope
+
+Prediction line equation =
+Profit = 6894.9240 + (0.1988 * COGS)
+
+1) using this equation, predict profit for COGS = 50000 (16835.8115)
+
+using this equation, predict profit for COGS = 50001 (16836.0103)
+
+
+
+2) using this equation, predict profit for COGS = 75000 (21806.2529)
+3) using this equation, predict profit for COGS = 100000 (26776.6990)
+4) using this equation, predict profit for COGS = 200000 (46658.4740)
+
+
+
+
+In Tableau, Blue color is used to indicate dimensions while Green color is used to indicate measures.
+
+3 types of sorting the data in columns - 
+1) Ascending
+2) Descending 
+3) Default (Data source)
+
+
+
+1) Joins (old technique to join tables before 2020)
+
+2) Relationship (new technique to join tables after 2020)
+
+
+
+
+
+
+
+3 components of Tableau-
+1. Worksheet
+2. Dashboard
+3. Story
+
+Nine sections on home page
+1. Dimension
+2. Measure
+3. Pages
+4. Filter
+5. Marks
+6. Rows
+7. Columns
+8. Canvas
+9. Show Me
+
+Four layout styles in Tableau -
+1. Standard
+2. Fit height
+3. Fit width
+4. Entire view
+
+Profit by Region & Order Priority (Text table)
+
+1) Shipping cost by Region & Segment (Text table)
+2) Sales by Region & Category (Text table)
+3) Quantity by Sub-category & Ship Mode (Text table)
+
+
+
+1) Average quantity by Region
+2) Average shipping cost by Sub-category & Order priority
+
+How to convert a dimension into count?
+Normal count vs Distinct count
+COUNT() vs COUNTD()
+
+1) No. of products by Region & Segment
+2) No. of customers by Market & Category
+
+
+
+1) Profit by Sub-category & Order priority (Highlight table)
+2) Average shipping cost by Region & Category (Highlight table)
+3) Average quantity by Region & Ship Mode (Highlight table)
+4) No. of orders by Market & Order Priority (Highlight table)
+5) No. of customers by Region & Segment (Highlight table)
+
+Diverging Colors
+
+Highlight all records having quantity more than 3500.
+
+1) Build highlight table of Shipping cost by Region & Category. Highlight the values having shipping cost > 50000.
+
+2) Build highlight table of quantity by Sub-category & Ship Mode. Highlight the values having quantity > 5000.
+
+
+
+
+
+
+
+1) Profit % Pie chart by Category
+2) Quantity % Pie chart by Segment
+3) Profit % Pie chart by Ship Mode
+4) Shipping cost % Pie chart by Market
+5) Profit % Pie chart by Market
+6) Quantity % Pie chart by Order Priority
+
+
+1) Profit by Region (Bubble chart)
+2) Quantity by Region (Bubble chart)
+3) Shipping cost by Country (Bubble chart)
+4) Profit by Country (Bubble chart)
+5) Profit by Sub-category (Bubble chart)
+6) No. of customers by Sub-category (Bubble chart)
+7) No. of products by Region (Bubble chart)
+8) No. of orders by Sub-category (Bubble chart)
+
+Bar chart has three varieties in Tableau -
+1. Regular
+2. Stacked
+3. Side-by-side
+
+Regular bar chart is used with single dimension. Stacked & Side-by-side bar charts are used with multiple dimensions.
+
+
+
+
+
+
+
+1) Sales by Region (Bar chart)
+2) Profit by Sub-category (Bar chart)
+3) Profit by Region (Bar chart)
+4) Quantity by Sub-category (Bar chart)
+5) Shipping cost by Region (Bar chart)
+6) No. of orders by Sub-category (Bar chart)
+7) No. of orders by Region (Bar chart)
+8) Profit by Country (Bar chart)
+
+
+Using the bar chart, highlight all sub-categories having shipping cost above 100k.
+
+
+
+Quantity by Region
+
+1. No. of customers by Sub-category
+2. No. of products by Sub-category
+
+Shipping cost % by Market & Segment (Stacked bar)
+Profit % by Market & Category (Stacked bar)
+
+Two types of Line charts -
+1. Discrete - Here the time period is considered as single level e.g. month, year, quarter etc.
+
+2. Continuous - Here the time period is considered with Year e.g. month-year or quarter-year.
+
+Discrete date - Blue
+Continuous date - Green
+
+Quarterly Profit (Discrete line)
+Quarterly Quantity (Discrete line)
+Quarterly No. of orders (Discrete line)
+
+Monthly Profit (Discrete line)
+Monthly no. of products (Discrete line)
+Monthly No. of orders (Discrete line)
+
+Quarterly Shipping Cost (Continuous line)
+
+Monthly Profit (Continuous line)
+Monthly No. of orders (Continuous line)
+Monthly No. of customers (Continuous line)
+
+Annual quantity by Market
+Annual no. of products by Market
+
+Quarterly no. of orders (Discrete area)
+
+
+Monthly Profit by Segment (Continuous area)
+Monthly Profit by Ship Mode (Continuous area)
+Monthly Profit by Order Priority (Continuous area)
+
+44538 records out of 51290 i.e. 87% records have sales value between 0 to 500.
+
+4126 out of 51290 i.e. 8% records have sales value between 500 to 1000.
+
+Within Consumer segment, 23071 records have sales between 0 to 500.
+Within Corporate segment, 13356 records have sales between 0 to 500.
+Within Home office segment, 8111 records have sales between 0 to 500.
+
+Profit Histogram by Category (Bin size 100)
+
+Quantity Histogram by Ship Mode (Bin size 1)
+
+Sales vs Profit scatter plot
+
+(Profit depends on Sales so Profit is Y variable and Sales is X variable)
+
+Two types of scatter plot
+1. With aggregation - used to compare individual values
+2. Without aggregation - used to find predictive equation
+
+
+Shipping cost vs Profit scatter plot by Sub-category
+
+
+Canada :
+
+R square is 0.81 i.e. 81% change in Y variable is due to change in X variable. Remaining 19% change can be due to unknown reasons.
+
+R square (Coefficient of determination)
+ 
+Canada = 0.81
+APAC = 0.27
+LATAM = 0.19
+US = 0.23
+EU = 0.22
+Africa = 0.37 
+EMEA = 0.11
+
+Shipping cost vs Profit Scatter plot by Market (Trend Line)
+
+Profit by Region Box Plot
+Quantity by Region Box Plot
+Sales by Sub-category Box Plot
+Profit by Sub-category Box Plot
+Profit by Country Box Plot
+
+Quantity by Country & Market 
+Box plot
+
+There are two types of Geo maps in Tableau -
+1. Symbol
+2. Solid (Choropleth)
+
+e.g. Country, State/province, County, City, Airport
+
+
+Profit by Country (Symbol map)
+Use dual color scheme - positive & negative
+
+Shipping cost by Country (Symbol map)
+Quantity by Country (Symbol map)
+
+Profit by Country (Solid map)
+Use dual color scheme - positive & negative
+
+Shipping cost by Country (Solid map)
+Quantity by Country (Solid map)
+
+Two types of Treemap - 
+1. Without group
+2. With group
+
+
+
+
+
+
+
+
+Profit by Sub-category (Treemap)
+Quantity by Sub-category (Treemap)
+Sales by Region (Treemap)
+Profit by Region (Treemap)
+Sales by Country (Treemap)
+
+
+Profit by Sub-category Group by Category (Treemap)
+Shipping cost by Sub-category Group by Category (Treemap)
+Profit by Country Group by Market (Treemap)
+Quantity by Country Group by Market (Treemap)
+
+
+Actual vs Expected profit by State (Bullet graph)
+Filters in Tableau -
+1. Data Source
+2. Dimension
+3. Measure
+4. Date
+5. Quick
+6. Top N
+7. Context
+
+
+Top 10 customers by Profit
+
+Top 15 customers by Quantity (tree map)
+Top 20 products by Profit (bubble chart)
+Top 10 products by Quantity (vertical bar)
+Bottom 12 countries by Shipping cost (solid map)
+
+Parameter - used to provide dynamic selection of values during filter
+data types of parameter - string, float, integer, date, boolean
+
+
+Build bar graph of top 10 customers by sales. Create a new parameter "Top N customers" using Range option - 8 to 20 with step size 2 and use here. 
+
+1) Quantity totals & subtotals by Category, Sub-category & Segment
+2) Shipping cost totals & subtotals by Category, Sub-category & Order Priority
+
+Groups -
+Tableau allows to create custom groups of dimension values. It can be used to highlight the values within treemap.
+
+1) Build treemap of sub-category & quantity. Add custom sub-category group on color to create groups. Add Segment as filter and show it on the right side (single value list)
+
+2) Build treemap of sub-category & shipping cost. Add custom sub-category group on color to create groups. Add Market as filter and show it on the right side (single value list)
+
+Using Region field, create 4 custom groups as below -
+Region Group 1 - East,Africa, Central Asia, Oceania
+Region Group 2 - EMEA, Canada, South, North Asia
+Region Group 3 - Central, Caribbean
+Region Group 4 - West, North, Southeast Asia
+Then build yearly line chart of no. of orders and add these groups on Color.
+
+Build treemap of region & no. of customers. Then add region custom group on color.
+
+Hierarchy- It allows user to group the fields in a hierarchial order i.e. top to bottom. Hierarchy field is identified by a "+" symbol.
+
+e.g. Year-Quarter-Month-Day
+
+
+1) Create a hierarchy "Customer Details" using two fields - Customer ID & Customer Name.
+Build bar chart using this hierarchy field & Profit.
+
+2) Create a hierarchy "Product Details" using two fields - Product ID & Product Name.
+Build bar chart using this hierarchy field & Quantity.  
+
+Sets - It is a collection of values that are inside a set or outside a set. A set can be used as filter with only two options - IN & OUT. It is usually used to compare the values inside the set vs outside the set e.g. Top 10 customers vs remaining customers etc.
+
+Create a set of top 20 products by quantity. Then build pie chart of IN vs OUT using this set.
+
+Table calculations - 
+1. Running total
+2. Difference
+3. % difference
+4. Rank
+5. Moving average (Line smoothening technique)
+
+
+Monthly Quantity difference
+(apply Market as filter)
+
+Monthly Sales % difference
+(Apply Region filter - single value list)
+Find out hightest positive % values for following regions - 
+West, East, South & North and compare them.
+
+
+Profit ranking by Region & Segment
+(Apply Order date year filter)
+
+Reference line
+
+Create vertical bar chart of region & profit. Then build a reference line using new parameter "Range - Profit by Region" with min = 25k, max = 300k & step size = 25k.
+
+Analytics -
+1. Constant line
+Build bar chart of sub-category & sales. Add two constant lines - 500k & 1300k and find no. of sub-categories between them.
+
+2. Average line
+
+Countries having shipping cost & profit above average
+
+3. Trend line
+
+4. Forecasting
+
+Additive model vs Multiplicative model
+TCSI (Trend, Cyclic, Seasonal, Irregular)
+
+1) Monthly Profit Forecasting for next 12 months  (use Market as filter)
+2) Monthly Quantity Forecasting for next 14 months (use Region as filter)
+3) Monthly Shipping cost Forecasting for next 15 months (use Segment as filter)
+
+5. Clustering
+K-means clustering (Centroid)
+
+1) Sales vs Profit by Region Clusters (use category as filter)
+2) Shipping cost vs Profit by Sub-category Clusters (use Market as filter)
+3) Shipping cost vs Profit by Region Clusters (use Segment as filter)
+
+
+Calculated fields in Tableau is a technique to create custom calculations using measures & dimensions for dashboards. They are mostly used for KPI.
+Two types of calculated fields-
+1. Without parameter
+2. With parameter
+
+Average Sales
+Average Profit
+Average Quantity
+Average Shipping cost
+No. of orders
+No. of products
+No. of customers
+No. of countries
+No. of Cities
+Profit Ratio
+
+
+
+1) Build treemap of sub-category & average sales.
+2) Build bubble chart of region & average profit
+3) Build vertical bar chart of Market & no. of orders
+4) Create solid map of Country & No. of cities
+5) Create symbol map of Country & No. of customers.
+6) Build continuous monthly line chart of Order date & average quantity 
+
+7) Create solid map of country & profit ratio and filter it using Market.
+8) Create treemap of sub-category & profit ratio and filter it using Region.
+9) Create bubble chart of region & profit ratio and filter it using Order date year.
+
+How to use parameter inside calculated field?
+1) First create the parameter with necessary options
+2) Then create a new calculated field that uses parameter
+3) In the calculated field code, check the parameter values using IF condition for decision making
+4) Finally use this field on the chart instead of regular measure or dimension
+
+Dynamic measures by Region (Tree map)
+Dynamic measures by Country (Solid map)
+
+
+Category
+Market
+Order Priority
+Region
+Segment
+Ship Mode
+
+Using this parameter & calculated field, build tree map of No. of orders 
+
+Discount status
+1) if discount 0 then print "No discount"
+2) if discount is above 0 but below or equal 0.25 then print "Low discount"
+3) if discount is above 0.25 but below or equal 0.50 then print "Medium discount"
+4) if discount is above 0.5 but below or equal 0.75 then print "High discount"
+5) if discount is above 0.75 then print "Maximum discount"
+
+Profit Status
+If profit < 0 then "Loss" 
+otherwise "Profit"
+
+Word cloud
+1. Place your dimension on Text button.
+2. Make it entire view.
+3. Change Marks card Automatic to Text.
+4. Drag the measure on Size button.
+5. Drag dimension on Color button.
+
+Profit by Region Word Cloud (filter by Segment)
+Quantity by Country Word Cloud (filter by Market)
+No. of orders by Sub-category Word Cloud (filter by Ship Mode)
+
+
+Avg Sales
+Avg Profit
+Avg Quantity
+Avg Discount
+Profit Ratio
+No. of orders
+No. of customers
+No. of products
+No. of cities
+
+Avg profit per order
+Avg profit per product
+Avg profit per customer
+
+
+Superstore_project
+
+Components of Dashboard - 
+1. Horizontal
+2. Vertical
+3. Image
+4. Blank
+5. Web page
+6. Navigation
+7. Download
+
+
+1) Pie chart using Segment & Profit
+2) Pie chart using Category & Profit
+3) Pie chart using Ship Mode & Profit
+4) Pie chart using Order Priority & Profit
+5) Horizontal bar chart of Sub-category & Sales
+6) Horizontal bar chart of Region & Quantity
+7) Vertical bar chart of Market & Shipping cost
+8) Vertical bar chart of Market & Avg Discount
+9) Continuous quarter line chart of profit
+10) Continuous quarter line chart of sales
+11) Discrete monthly area chart of quantity
+12) Geographic Solid map of countries (don't use any measure.. just show countries)
+13) Treemap of Sub-category & No. of orders
+14) Treemap of Sub-category & No. of customers
+15) Treemap of Region & No. of products
+16) Top 10 Countries by Profit ratio (Bubble chart)
+17) Sales vs Profit scatter plot with Trend line (remove aggregate measure) 
+18) Quantity histogram (bin size 1)
+19) Box plot using Sub-category & Profit
+
+
+
+
+Market Shipping cost & Avg Discount by Sub-cat Dashboard
+
+
+https://en.m.wikipedia.org/wiki/Main_Page
+
+https://en.m.wikipedia.org/wiki/ France
+https://en.m.wikipedia.org/wiki/ Argentina
+
+Open a new dashboard
+Use state solid map of US
+Add a web page to show US state wikipedia page
+
+LOD (Level of Detail) Expressions -
+1. Fixed - based on date, based on dimension
+2. Include
+3. Exclude
+
+
+
+1) Quantity by Order Priority
+After creating LOD, in new worksheet, add Order priority in rows & then ship mode to check the total
+
+2) Average Profit by Country
+After creating LOD, in new worksheet, add Country first & then State to check the results
+
+
+Highlight country by Market & filter KPI Dashboard
+
+
+Data blending is a technique in Tableau to join the data coming from different types of sources e.g. TXT, CVS, XLS, Oracle, SQL Server etc. It requires min. two types of datasources - Primary & Secondary. Any dataset selected first on the sheet automatically becomes Primary and others become Secondary. For successful data blending, there must be atleast one common column necessary to join Primary & Secondary.
+
+----------------------------------------------
+Story can created using a worksheet or dashboard. But dashboard can't be created using Story.
+
+Each story is created by adding story points similar to a slide in PPT file.
+
+Create a story in Superstore project for country = US.
+Build following charts -
+1. build any two charts for Sales
+2. build any two charts for Profit
+3. build any two charts for Quantity
+4. build any two charts for No. of orders
+5. build any two charts for No. of customers
+6. build any two charts for Profit ratio
+
+and add these charts one by one in a story - "US Business Analysis"
+
+
+
+
+What's the difference between "New Column" & "New Measure"?
+
+New Measure is single aggregate value using SUM, AVERAGE etc. e.g. Total sales, Average profit etc.
+
+New column - here the formula is calculated for every row e.g. unit price * quantity
+
+
+
+1) Productwise no. of orders (Bar chart)
+
+
+
+Quarterly Freight by Category Ribbon chart
+
+Sales by Customer Tree map
+
+1) Freight by Country
+2) Sales by Country
+3) Discount by Country
+
+
+
+
+

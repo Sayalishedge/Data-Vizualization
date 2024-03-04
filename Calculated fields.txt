@@ -1,0 +1,17 @@
+Calculated fields
+1.Net Sales
+[Unit Price] * [Quantity] * (1-[Discount])
+
+2.Discontinued products
+COUNT(IF ([Discontinued]='Yes')THEN [Product ID] END)
+
+3.Avg Ship days
+DATEDIFF('day',[Order Date],[Shipped Date])
+
+4.Delayed Shippment
+IF([Shipped Date]>[Required Date]) THEN' yes' ELSE'No'END
+
+Total cost = unitCost*totalQuantity
+Total revenue = Total quantity*UnitPrice
+Net Profit = Total Revenue-Total Cost
+
